@@ -11,7 +11,7 @@ namespace TestesUnitarios
     public class TesteFilme
     {
         FilmeController _controller;
-        CinemaContext _banco; 
+        CinemaContext _banco;
 
         public TesteFilme()
         {
@@ -33,7 +33,7 @@ namespace TestesUnitarios
         {
             Filme filme = new Filme()
             {
-                Titulo = "Teste3",
+                Titulo = "Titanic2",
                 Descricao = "Teste",
                 Duracao = 100,
             };
@@ -60,7 +60,7 @@ namespace TestesUnitarios
         [Fact]
         public void Excluir()
         {
-            var retorno = _controller.Excluir(12, true) as JsonResult;
+            var retorno = _controller.Excluir(13, true) as JsonResult;
             Assert.Equal(1, retorno.Value.GetType().GetProperty("resultado").GetValue(retorno.Value));
         }
     }

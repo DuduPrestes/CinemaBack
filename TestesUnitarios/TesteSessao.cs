@@ -62,7 +62,7 @@ namespace TestesUnitarios
         [Fact]
         public void Excluir()
         {
-            var retorno = _controller.Excluir(3, true) as JsonResult;
+            var retorno = _controller.Excluir(6, true) as JsonResult;
             Assert.Equal(1, retorno.Value.GetType().GetProperty("resultado").GetValue(retorno.Value));
         }
     }
